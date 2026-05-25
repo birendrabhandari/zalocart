@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Zalocart — The Future of Shopping | Festive Launch Coming Soon</title>
+  <!-- Google Fonts: Modern Sans-Serif (Plus Jakarta Sans + Inter fallback) -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (Free Icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+      background: #0A0C12;
+      color: #F5F3F0;
+      overflow-x: hidden;
+    }
+
+    /* Premium Dark Mode + Gold / Emerald Green Accents */
+    .bg-dynamic {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(circle at 20% 20%, #11161f, #030507 90%);
+      z-index: -2;
+    }
+
+    /* Abstract festive tech glow orbs */
+    .glow-gold {
+      position: fixed;
+      width: 80vw;
+      height: 80vw;
+      background: radial-gradient(circle, rgba(212, 175, 55, 0.08) 0%, rgba(0, 0, 0, 0) 70%);
+      border-radius: 50%;
+      bottom: -40vh;
+      right: -20vw;
+      z-index: -1;
+      filter: blur(110px);
+      animation: floatGlow 18s infinite alternate ease-in-out;
+    }
+
+    .glow-emerald {
+      position: fixed;
+      width: 70vw;
+      height: 70vw;
+      background: radial-gradient(circle, rgba(80, 200, 120, 0.06) 0%, rgba(0, 0, 0, 0) 70%);
+      border-radius: 50%;
+      top: -30vh;
+      left: -20vw;
+      z-index: -1;
+      filter: blur(100px);
+      animation: floatGlow 22s infinite alternate-reverse;
+    }
+
+    @keyframes floatGlow {
+      0% { transform: translate(0, 0) scale(1); opacity: 0.5; }
+      100% { transform: translate(40px, -30px) scale(1.15); opacity: 0.9; }
+    }
+
+    /* Container */
+    .container {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 1rem 1.5rem 2rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* Glass Card Core */
+    .prestige-card {
+      background: rgba(12, 16, 24, 0.68);
+      backdrop-filter: blur(14px);
+      border-radius: 56px;
+      border: 1px solid rgba(212, 175, 55, 0.35);
+      padding: 2.5rem 2rem;
+      width: 100%;
+      max-width: 1000px;
+      margin: 2rem auto;
+      box-shadow: 0 32px 56px -24px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(212, 175, 55, 0.2) inset;
+      transition: all 0.4s ease;
+    }
+
+    .prestige-card:hover {
+      border-color: rgba(212, 175, 55, 0.6);
+      box-shadow: 0 38px 70px -24px rgba(212, 175, 55, 0.2), 0 0 0 1px rgba(212, 175, 55, 0.4) inset;
+    }
+
+    /* 1. Top Banner */
+    .top-banner {
+      background: rgba(212, 175, 55, 0.08);
+      backdrop-filter: blur(8px);
+      border-radius: 100px;
+      text-align: center;
+      padding: 0.7rem 1rem;
+      margin-bottom: 2rem;
+      border: 1px solid rgba(212, 175, 55, 0.4);
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .top-banner span {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.5px;
+      color: #F5E7B2;
+    }
+
+    .top-banner i {
+      color: #D4AF37;
+      margin-right: 8px;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      margin: 1rem 0 1.8rem;
+    }
+
+    .badge-launch {
+      display: inline-block;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.2), rgba(0, 0, 0, 0.4));
+      padding: 0.3rem 1.2rem;
+      border-radius: 40px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      border: 1px solid rgba(212, 175, 55, 0.6);
+      margin-bottom: 1.5rem;
+      color: #ECD89A;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 7vw, 4.6rem);
+      font-weight: 800;
+      line-height: 1.2;
+      background: linear-gradient(135deg, #FFFFFF 0%, #F5E18B 40%, #D4AF37 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      margin-bottom: 1.2rem;
+      letter-spacing: -0.02em;
+    }
+
+    .subheadline {
+      font-size: 1.1rem;
+      max-width: 650px;
+      margin: 0 auto;
+      color: #C9D1E6;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    .highlight-discount {
+      font-weight: 700;
+      color: #D4AF37;
+      background: rgba(212, 175, 55, 0.12);
+      display: inline-block;
+      padding: 0.1rem 0.6rem;
+      border-radius: 40px;
+    }
+
+    /* Countdown + Visual Hybrid (modern timer + abstract cart icon) */
+    .countdown-visual {
+      margin: 2.5rem 0 1.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .timer-box {
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(12px);
+      border-radius: 48px;
+      padding: 1.2rem 1.8rem;
+      border: 1px solid rgba(212, 175, 55, 0.5);
+      min-width: 260px;
+      text-align: center;
+    }
+
+    .timer-flex {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .time-unit {
+      text-align: center;
+    }
+
+    .time-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(145deg, #F5E7B2, #D4AF37);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      line-height: 1;
+      font-family: 'Inter', monospace;
+      letter-spacing: 2px;
+    }
+
+    .time-label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 600;
+      color: #A9B7E0;
+      margin-top: 6px;
+    }
+
+    .abstract-cart {
+      background: rgba(15, 20, 28, 0.7);
+      border-radius: 60px;
+      padding: 0.8rem 1.8rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      border: 1px solid rgba(80, 200, 120, 0.4);
+      backdrop-filter: blur(8px);
+    }
+
+    .abstract-cart i {
+      font-size: 2.2rem;
+      color: #D4AF37;
+      filter: drop-shadow(0 0 8px rgba(212, 175, 55, 0.5));
+    }
+
+    .cart-text {
+      font-weight: 500;
+      font-size: 0.9rem;
+      color: #D0E6C0;
+    }
+
+    .cart-text strong {
+      color: #EBC45E;
+    }
+
+    /* Email Subscription Form */
+    .form-holder {
+      max-width: 580px;
+      margin: 2rem auto 1.8rem;
+    }
+
+    .input-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+    }
+
+    .email-input-premium {
+      flex: 1;
+      min-width: 240px;
+      background: #0E1422;
+      border: 1px solid rgba(212, 175, 55, 0.5);
+      border-radius: 80px;
+      padding: 1rem 1.8rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 1rem;
+      color: white;
+      outline: none;
+      transition: all 0.25s;
+    }
+
+    .email-input-premium:focus {
+      border-color: #D4AF37;
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.3);
+      background: #0B1020;
+    }
+
+    .email-input-premium::placeholder {
+      color: #8F9BB5;
+    }
+
+    .cta-btn-gold {
+      background: linear-gradient(105deg, #B8860B, #D4AF37);
+      border: none;
+      border-radius: 80px;
+      padding: 1rem 2.3rem;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+      color: #0A0C12;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      box-shadow: 0 6px 16px rgba(212, 175, 55, 0.3);
+    }
+
+    .cta-btn-gold i {
+      font-size: 1rem;
+      transition: transform 0.2s;
+    }
+
+    .cta-btn-gold:hover {
+      transform: translateY(-3px);
+      background: linear-gradient(105deg, #D4AF37, #E5C158);
+      box-shadow: 0 14px 28px rgba(212, 175, 55, 0.5);
+    }
+
+    .cta-btn-gold:active {
+      transform: scale(0.97);
+    }
+
+    .feedback-message {
+      text-align: center;
+      margin-top: 1.2rem;
+      font-size: 0.85rem;
+      border-radius: 80px;
+      padding: 0.7rem;
+    }
+
+    .success-msg {
+      background: rgba(80, 200, 120, 0.12);
+      border: 1px solid #50c878;
+      color: #B9F5CF;
+    }
+
+    .error-msg {
+      background: rgba(255, 80, 80, 0.1);
+      border: 1px solid #ff8080;
+      color: #FFC9C9;
+    }
+
+    /* Footer */
+    .footer-copyright {
+      text-align: center;
+      margin-top: 3rem;
+      padding-top: 1.2rem;
+      font-size: 0.75rem;
+      color: #6E7B9E;
+      border-top: 1px solid rgba(212, 175, 55, 0.25);
+    }
+
+    /* animations */
+    .fade-up {
+      animation: fadeUp 0.7s ease forwards;
+    }
+
+    @keyframes fadeUp {
+      0% {
+        opacity: 0;
+        transform: translateY(28px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 750px) {
+      .prestige-card {
+        padding: 1.8rem 1.2rem;
+        border-radius: 40px;
+      }
+      .timer-flex {
+        gap: 0.8rem;
+      }
+      .time-number {
+        font-size: 1.9rem;
+      }
+      .abstract-cart {
+        padding: 0.6rem 1.2rem;
+      }
+      .abstract-cart i {
+        font-size: 1.6rem;
+      }
+      .cart-text {
+        font-size: 0.75rem;
+      }
+      .countdown-visual {
+        gap: 1rem;
+      }
+      .cta-btn-gold {
+        padding: 0.85rem 1.8rem;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .time-number {
+        font-size: 1.6rem;
+      }
+      .timer-box {
+        padding: 0.9rem;
+      }
+      .input-wrapper {
+        flex-direction: column;
+      }
+      .top-banner span {
+        font-size: 0.7rem;
+      }
+      h1 {
+        font-size: 1.9rem;
+      }
+      .subheadline {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="bg-dynamic"></div>
+<div class="glow-gold"></div>
+<div class="glow-emerald"></div>
+
+<div class="container">
+  <div class="prestige-card">
+    <!-- 1. Top Banner: Elegant announcement bar -->
+    <div class="top-banner fade-up">
+      <span><i class="fas fa-gift"></i> ✨ The Ultimate Festive Launch is Coming ✨ <i class="fas fa-sparkle"></i></span>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero fade-up">
+      <div class="badge-launch"><i class="fas fa-bolt"></i> GRAND FESTIVE RELEASE</div>
+      <h1>The Future of Shopping Unleashes This Festive Season.</h1>
+      <div class="subheadline">
+        <span class="highlight-discount"><i class="fas fa-tag"></i> 20% Early Access Discount</span><br>
+        Zalocart is bringing you a curated collection of global trending products. Sign up now for exclusive early access and a special <strong>20% discount</strong> on our grand launch right after Dussehra!
+      </div>
+    </div>
+
+    <!-- Countdown + Abstract Digital Cart Visual (Modern hybrid) -->
+    <div class="countdown-visual fade-up">
+      <div class="timer-box">
+        <div class="timer-flex" id="countdownTimer">
+          <div class="time-unit">
+            <div class="time-number" id="days">00</div>
+            <div class="time-label">DAYS</div>
+          </div>
+          <div class="time-unit">
+            <div class="time-number" id="hours">00</div>
+            <div class="time-label">HOURS</div>
+          </div>
+          <div class="time-unit">
+            <div class="time-number" id="minutes">00</div>
+            <div class="time-label">MINS</div>
+          </div>
+          <div class="time-unit">
+            <div class="time-number" id="seconds">00</div>
+            <div class="time-label">SECS</div>
+          </div>
+        </div>
+      </div>
+      <!-- Premium abstract digital shopping cart graphic -->
+      <div class="abstract-cart">
+        <i class="fas fa-shopping-cart"></i>
+        <div class="cart-text"><strong>Zalocart</strong> • global trendsetter • <i class="fas fa-gem"></i> live after Dussehra</div>
+      </div>
+    </div>
+
+    <!-- Email Subscription Form -->
+    <div class="form-holder fade-up">
+      <div class="input-wrapper">
+        <input type="email" id="earlyAccessEmail" class="email-input-premium" placeholder="Your email address" autocomplete="email">
+        <button id="notifyBtn" class="cta-btn-gold">
+          Unlock Early Access <i class="fas fa-arrow-right"></i>
+        </button>
+      </div>
+      <div id="subscriptionFeedback"></div>
+      <div style="text-align: center; margin-top: 1rem; font-size: 0.7rem; opacity: 0.7;">
+        <i class="fas fa-lock"></i> No spam, only launch perks & 20% discount code
+      </div>
+    </div>
+
+    <!-- Footer: Copyright 2026 Zalocart -->
+    <div class="footer-copyright fade-up">
+      © 2026 Zalocart. All rights reserved. | Designed for the festive future.
+    </div>
+  </div>
+</div>
+
+<script>
+  // ------------------------------------------------------------
+  // MODERN COUNTDOWN TIMER: target date = right after Dussehra 2026
+  // Dussehra 2026 is on October 20 (approx). We set launch +2 days after = Oct 22, 2026
+  // But to be dynamic & meaningful -> launch date: "October 24, 2026 10:00:00" 
+  // This ensures "right after festive season / Dussehra" placeholder.
+  // Using a realistic date: after Oct 20, set Oct 24, 2026, 10:00 AM.
+  // ------------------------------------------------------------
+  let launchDate;
+
+  const STORED_LAUNCH_KEY = 'zalocart_festive_launch_target';
+  const storedTarget = localStorage.getItem(STORED_LAUNCH_KEY);
+  const nowCheck = new Date();
+
+  // fixed target: October 24, 2026 (post-Dussehra festive hype)
+  const defaultLaunch = new Date(2026, 9, 24, 10, 0, 0); // month 9 = October
+
+  if (storedTarget && !isNaN(new Date(storedTarget).getTime())) {
+    launchDate = new Date(storedTarget);
+    // if stored date is in the past, reset to default
+    if (launchDate <= nowCheck) {
+      launchDate = new Date(defaultLaunch);
+      localStorage.setItem(STORED_LAUNCH_KEY, launchDate.toISOString());
+    }
+  } else {
+    launchDate = new Date(defaultLaunch);
+    localStorage.setItem(STORED_LAUNCH_KEY, launchDate.toISOString());
+  }
+
+  // Additionally, ensure target > current year? just fine.
+  function updateCountdown() {
+    const now = new Date().getTime();
+    const distance = launchDate.getTime() - now;
+
+    if (distance < 0) {
+      document.getElementById('days').innerText = '00';
+      document.getElementById('hours').innerText = '00';
+      document.getElementById('minutes').innerText = '00';
+      document.getElementById('seconds').innerText = '00';
+      // optional launch event message
+      return;
+    }
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (86400000)) / (3600000));
+    const minutes = Math.floor((distance % 3600000) / 60000);
+    const seconds = Math.floor((distance % 60000) / 1000);
+
+    document.getElementById('days').innerText = days < 10 ? '0' + days : days;
+    document.getElementById('hours').innerText = hours < 10 ? '0' + hours : hours;
+    document.getElementById('minutes').innerText = minutes < 10 ? '0' + minutes : minutes;
+    document.getElementById('seconds').innerText = seconds < 10 ? '0' + seconds : seconds;
+  }
+
+  updateCountdown();
+  setInterval(updateCountdown, 1000);
+
+  // ------------------------------------------------------------
+  // 2. EMAIL SUBSCRIPTION + Early Access + 20% discount promise
+  // ------------------------------------------------------------
+  const emailField = document.getElementById('earlyAccessEmail');
+  const subscribeBtn = document.getElementById('notifyBtn');
+  const feedbackDiv = document.getElementById('subscriptionFeedback');
+
+  function showSubscribeMessage(message, isError = false) {
+    feedbackDiv.innerHTML = '';
+    const msgDiv = document.createElement('div');
+    msgDiv.className = `feedback-message ${isError ? 'error-msg' : 'success-msg'}`;
+    msgDiv.innerHTML = isError ? `<i class="fas fa-exclamation-circle"></i> ${message}` : `<i class="fas fa-check-circle"></i> ${message}`;
+    feedbackDiv.appendChild(msgDiv);
+    setTimeout(() => {
+      if (feedbackDiv.firstChild === msgDiv) {
+        msgDiv.style.opacity = '0';
+        setTimeout(() => {
+          if (feedbackDiv.firstChild === msgDiv) feedbackDiv.removeChild(msgDiv);
+        }, 400);
+      }
+    }, 4500);
+  }
+
+  function validateEmail(email) {
+    const regex = /^[^\s@]+@([^\s@.,]+\.)+[^\s@.,]{2,}$/i;
+    return regex.test(email);
+  }
+
+  function handleSubscription() {
+    const email = emailField.value.trim();
+    if (!email) {
+      showSubscribeMessage('Please enter your email to unlock early access & 20% discount.', true);
+      emailField.focus();
+      return;
+    }
+    if (!validateEmail(email)) {
+      showSubscribeMessage('Please provide a valid email address (e.g., name@domain.com).', true);
+      emailField.focus();
+      return;
+    }
+
+    // Store waitlist (demo localstorage + show exclusive 20% voucher preview)
+    const existing = localStorage.getItem('zalocart_early_vip');
+    if (existing === email) {
+      showSubscribeMessage('✨ You’re already on the list! Your 20% festive voucher is reserved.', false);
+    } else {
+      localStorage.setItem('zalocart_early_vip', email);
+      // In real world: send to backend
+      showSubscribeMessage('🎉 You’re in! Welcome to Zalocart. You’ll receive a 20% discount code & early access right after Dussehra.', false);
+      emailField.value = '';
+    }
+
+    // Button micro-interaction
+    const originalBtnText = subscribeBtn.innerHTML;
+    subscribeBtn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Securing Access';
+    setTimeout(() => {
+      subscribeBtn.innerHTML = originalBtnText;
+    }, 1800);
+  }
+
+  subscribeBtn.addEventListener('click', handleSubscription);
+  emailField.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') {
+      e.preventDefault();
+      handleSubscription();
+    }
+  });
+
+  // Optional: Add festive particle-effect on hover? subtle extra polish
+  // just to reflect modern premium ecommerce feel.
+  const cartIcon = document.querySelector('.abstract-cart i');
+  if (cartIcon) {
+    cartIcon.addEventListener('mouseenter', () => {
+      cartIcon.style.transform = 'scale(1.1)';
+      cartIcon.style.transition = '0.2s';
+    });
+    cartIcon.addEventListener('mouseleave', () => {
+      cartIcon.style.transform = 'scale(1)';
+    });
+  }
+</script>
+</body>
+</html>
